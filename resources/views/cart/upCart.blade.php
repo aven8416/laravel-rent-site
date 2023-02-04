@@ -88,7 +88,7 @@ $(document).ready(function(){
     </div>
 </td>
 <td class="cart_total">
-    <p class="cart_total_price">${{$cartItem->subtotal}}</p>
+    <p class="cart_total_price">{{$cartItem->subtotal}} BYN</p>
 </td>
 <td class="cart_delete">
     <a class="cart_quantity_delete" style="background-color:red"

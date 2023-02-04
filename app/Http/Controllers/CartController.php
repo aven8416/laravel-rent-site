@@ -17,9 +17,9 @@ class CartController extends Controller
 
     public function addItem(Request $request, $id){
         $products = Product::find($id); // get prodcut by id
-        if(isset($request->newPrice))
+        if(isset($products->sale_price))
         {
-            $price = $request->newPrice; // if size select
+            $price = $products->sale_price; // if sale price
         }
         else{
             $price = $products->pro_price; // default price

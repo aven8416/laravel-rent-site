@@ -33,7 +33,7 @@
 
                     <div class="brands_products"><!--brands_products-->
                         <div class="brands-name">
-                              <h2>Category</h2>
+                              <h2>Категория</h2>
                                 <ul class="nav nav-pills nav-stacked">
 
                                     <?php $cats = DB::table('product_categories')->orderby('name', 'ASC')->get();?>
@@ -56,9 +56,9 @@
                     </div><!--/brands_products-->
 
 
-                    <div class="brands_products"><!--brands_products-->
+                    <div class="brands_products" style="margin-bottom: 100px"><!--brands_products-->
                         <div class="brands-name">
-                            <h2>Category</h2>
+                            <h2>Бренд</h2>
                             <ul class="nav nav-pills nav-stacked">
 
                                 <?php $cats = DB::table('product_brands')->orderby('name', 'ASC')->get();?>
@@ -79,10 +79,6 @@
                             </ul>
                         </div>
                     </div><!--/brands_products-->
-
-                    <div class="shipping text-center"><!--shipping-->
-                        <img src="{{url('../')}}/images/home/shipping.jpg" alt="" />
-                    </div><!--/shipping-->
 
                 </div>
             </div>

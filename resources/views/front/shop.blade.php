@@ -13,24 +13,6 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="left-sidebar">
-
-                   {{-- <div class="price-range"><!--price-range-->
-
-                                <div class="well">
-                                   <h2>Price Range</h2>
-                                    <div id="slider-range"></div>
-                                    <br>
-                                    <b class="pull-left">$
-                                        <input size="2" type="text" id="amount_start" name="start_price"
-                                               value="15" style="border:0px; font-weight: bold; color:green" readonly="readonly" /></b>
-
-                                    <b class="pull-right">$
-                                        <input size="2" type="text" id="amount_end" name="end_price" value="65"
-                                               style="border:0px; font-weight: bold; color:green" readonly="readonly"/></b>
-                                   </div>
-
-                            </div><!--/price-range-->
---}}
                     <div class="brands_products"><!--brands_products-->
                         <div class="brands-name">
                               <h2>Категория</h2>
@@ -43,20 +25,13 @@
                                  <span class="pull-right">({{\App\Models\Product::where('cat_id',$cat->id)->count()}})</span>
                                   <b>  {{ucwords($cat->name)}}</b></li>
                                    @endforeach
-                                 <?php /*   <li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                    <li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
-                                    <li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                    <li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                    <li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                    <li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-                                  * */?>
 
                                </ul>
                         </div>
                     </div><!--/brands_products-->
 
 
-                    <div class="brands_products"><!--brands_products-->
+                    <div class="brands_products" style="margin-bottom: 100px"><!--brands_products-->
                         <div class="brands-name">
                             <h2>Бренд</h2>
                             <ul class="nav nav-pills nav-stacked">
@@ -68,22 +43,10 @@
                                         <span class="pull-right">({{\App\Models\Product::where('brand_id',$brand->id)->count()}})</span>
                                         <b>  {{ucwords($brand->name)}}</b></li>
                                 @endforeach
-                                <?php /*   <li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                    <li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
-                                    <li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                    <li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                    <li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                    <li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-                                  * */?>
 
                             </ul>
                         </div>
                     </div><!--/brands_products-->
-
-
-                    <div class="shipping text-center"><!--shipping-->
-                        <img src="{{url('../')}}/images/home/shipping.jpg" alt="" />
-                    </div><!--/shipping-->
 
                 </div>
             </div>

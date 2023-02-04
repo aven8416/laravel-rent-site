@@ -71,7 +71,7 @@ var proDum = $('#proDum').val();
                         </div>
                     </div><!--/cat_products-->
 
-                    <div class="brands_products"><!--brands_products-->
+                    <div class="brands_products" style="margin-bottom: 100px"><!--brands_products-->
                         <h2>Бренды</h2>
                         <div class="brands-name">
                             <ul class="nav nav-pills nav-stacked">
@@ -83,11 +83,6 @@ var proDum = $('#proDum').val();
                             </ul>
                         </div>
                     </div><!--/brands_products-->
-
-
-                    <div class="shipping text-center"><!--shipping-->
-                        <img src="/images/home/shipping.jpg" alt="" />
-                    </div><!--/shipping-->
 
                 </div>
             </div>
