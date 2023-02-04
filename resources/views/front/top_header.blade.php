@@ -5,7 +5,7 @@
                             <div class="contactinfo">
                                 <ul class="nav nav-pills">
                                     <li><a href="#"><i class="fa fa-phone"></i> +375 29 200 11 15</a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i> carRent@gmail.com</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i> avtorenda@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -62,20 +62,20 @@
                                 <td>{{ucwords($order->name)}}</td>
 
                                 @if($order->status=='confirmed')
-                                    <td ><p style="background-color: #4cd964 ; color: #FFFFFF;padding-left: 15px">{{$order->status}}</p></td>
+                                    <td ><p style="background-color: #4cd964 ; color: #FFFFFF;padding-left: 15px">Подтверждено</p></td>
                                 @elseif($order->status=='canceled')
-                                    <td><p style="background-color: #ff2d55; color: #FFFFFF;padding-left: 15px">{{$order->status}}</p></td>
-                                @else
-                                    <td><p style="background-color: #34aadc ; color: #FFFFFF;padding-left: 15px">{{$order->status}}</p></td>
+                                    <td><p style="background-color: #ff2d55; color: #FFFFFF;padding-left: 15px">Отклонено</p></td>
+                                @elseif($order->status=='pending')
+                                    <td><p style="background-color: #34aadc ; color: #FFFFFF;padding-left: 15px">В обработке</p></td>
                                 @endif
                                 <td>{{$order->total}}</td>
                                 @if($order->payment_type == 'COD')
-                                    <td>Не оплачено</td>
+                                    <td>наличными</td>
                                 @else
-                                    <td>оплачено</td>
+                                    <td>картой</td>
                                 @endif
                                 <td><a href="{{url('/')}}/admin/orders/orderDetails/{{$order->id}}"
-                                       class="btn btn-info btn-small">See Details</a></td>
+                                       class="btn btn-info btn-small">Просмотреть детали</a></td>
 
                                 <td>
                                     <div class="row">

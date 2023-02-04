@@ -40,7 +40,7 @@ $(document).ready(function(){
         <section id="main-content">
             <section class="wrapper">
                 <div class="content-box-large">
-                    <h1>Продукты</h1>
+                    <h1>Товары</h1>
                     <table class="table table-striped">
                         <thead>
                           <tr>

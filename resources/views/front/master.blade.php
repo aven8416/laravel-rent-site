@@ -229,7 +229,7 @@
 
 
                                     <p align="center" class="pull-right"
-                                       style="font-weight:bold; margin:5px">Total:
+                                       style="font-weight:bold; margin:5px">Сумма:
                                         <span style="color:green">{{Cart::subtotal()}}</span></p>
 
                                     <?php $cartData = Cart::content();?>
@@ -241,8 +241,9 @@
                                                     <img src="/upload/images/{{$cartD->options->img}}" style="width:80%"/>
                                                 </div>
                                                 <div class="col-sm-7">
-                                                    <h4 style="margin:0px;">{{$cartD->name}}</h4>
-                                                    <p>price: {{$cartD->price}}  qty: {{$cartD->qty}}</p>
+                                                    <h4 style="margin-bottom: 2px;">{{$cartD->name}}</h4>
+                                                    <p style="margin-bottom: 2px;">цена: {{$cartD->price}} BYN</p>
+                                                    <p>дни: {{$cartD->qty}}</p>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -250,12 +251,12 @@
                                         <div class="row">
                                             <div class="col-md-5 pull-left">
                                                 <a href="{{url('/checkout')}}"
-                                                   style="padding:5px; color:#fff; background-color:orange">Checkout</a>
+                                                   style="padding:5px; color:#fff; background-color:orange">Оформить</a>
                                             </div>
 
                                             <div class="col-md-5 pull-right">
                                                 <a href="{{url('/cart')}}"
-                                                   style="padding:5px; color:#fff; background-color:blueviolet">View Cart</a>
+                                                   style="padding:5px; color:#fff; background-color:blueviolet">Корзина</a>
                                             </div>
                                     @endif
                                 </ul>
@@ -263,9 +264,9 @@
 
 
                             <?php if (Auth::check()) { ?>
-                            <li><a href="{{url('/logout')}}"><i class="fa fa-lock"></i> Logout</a></li>
+                            <li><a href="{{url('/logout')}}"><i class="fa fa-lock"></i> Выйти</a></li>
                             <?php } else { ?>
-                            <li><a href="{{url('/login')}}"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a href="{{url('/login')}}"><i class="fa fa-lock"></i> Войти</a></li>
                             <?php } ?>
                             </li>
                         </ul>
@@ -365,60 +366,60 @@
             <div class="row">
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>Service</h2>
+                        <h2>Сервис</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Online Help</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Order Status</a></li>
-                            <li><a href="#">Change Location</a></li>
-                            <li><a href="#">FAQ’s</a></li>
+                            <li><a href="#">Помощь</a></li>
+                            <li><a href="#">Обратная связь</a></li>
+                            <li><a href="#">Статус заакза</a></li>
+                            <li><a href="#">Изменить местоположение</a></li>
+                            <li><a href="#">Вопросы и ответы</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>Quick Rent</h2>
+                        <h2>Быстрая аренда</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Rock stars instrument</a></li>
-                            <li><a href="#">Guitars</a></li>
-                            <li><a href="#">Acoustic</a></li>
-                            <li><a href="#">Gift Cards</a></li>
-                            <li><a href="#">Trombone</a></li>
+                            <li><a href="#">Грузовые</a></li>
+                            <li><a href="#">Легковые</a></li>
+                            <li><a href="#">Спортивные</a></li>
+                            <li><a href="#">Электрокары</a></li>
+                            <li><a href="#">Кабриолеты</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>Policies</h2>
+                        <h2>Политика компании</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Privecy Policy</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="#">Billing System</a></li>
-                            <li><a href="#">Ticket System</a></li>
+                            <li><a href="#">Условия эксплуатации</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Политка возврата</a></li>
+                            <li><a href="#">Выставление счета</a></li>
+                            <li><a href="#">Система свзяи</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>About Service</h2>
+                        <h2>О нас</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Company Information</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Store Location</a></li>
-                            <li><a href="#">Affillate Program</a></li>
-                            <li><a href="#">Copyright</a></li>
+                            <li><a href="#">Информация о компании</a></li>
+                            <li><a href="#">Карьера</a></li>
+                            <li><a href="#">Офис</a></li>
+                            <li><a href="#">Партнерская программа</a></li>
+                            <li><a href="#">Авторские права</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-3 col-sm-offset-1">
                     <div class="single-widget">
-                        <h2>About Renter</h2>
+                        <h2>Об аренде</h2>
 
                         <form action="#" class="searchform">
-                            <input type="text" placeholder="Your email address" />
+                            <input type="text" placeholder="Ваш электронная почта" />
                             <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-                            <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                            <p>Подпишись, чтобы получать самую актуальную информацию о нас</p>
                         </form>
                     </div>
                 </div>
@@ -430,7 +431,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2017 MusicRent All rights reserved.</p>
+                <p class="pull-left">Copyright © 2023 АвтоРенда Все права защищены.</p>
             </div>
         </div>
     </div>

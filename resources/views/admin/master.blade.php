@@ -29,15 +29,6 @@
 
 
 @yield('content')
- <footer>
-         <div class="container">
-
-            <div class="copy text-center">
-               Copyright 2023 <a href='#'>АвтоРенда</a>
-            </div>
-
-         </div>
-      </footer>
 
       <script src="{{asset('admin_theme/js/jquery.js')}}"></script>
 

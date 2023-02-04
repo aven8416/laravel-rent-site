@@ -23,17 +23,17 @@ class Order extends Model
         // for order inserting to database
 
         $user = Auth::user();
-        $order = $user->orders()->create(['total' => Cart::total(), 'status' => 'pending','payment_type'=>$payment_type]);
+        $order = $user->orders()->create(['total' => Cart::subtotal(), 'status' => 'pending','payment_type'=>$payment_type]);
 
 
         $cartItems = Cart::content();
         foreach ($cartItems as $cartItem) {
-            $order->orderFields()->attach($cartItem->id, ['qty' => $cartItem->qty,'status' => Cart::tax(), 'total' => $cartItem->qty * $cartItem->price*$cartItem->qty_days]);
+            $order->orderFields()->attach($cartItem->id, ['qty' => $cartItem->qty,'status' => Cart::tax(), 'total' => $cartItem->qty * $cartItem->price]);
         }
     }
 
     public function orderProducts() {
 
-        return $this->belongsToMany(Product::class, 'order_products');
+        return $this->belongsToMany(Product::class, 'order_product');
     }
 }

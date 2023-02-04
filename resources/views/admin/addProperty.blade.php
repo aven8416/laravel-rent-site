@@ -19,7 +19,7 @@ if(isset($id)){
   {!! Form::open(['url' => 'admin/sumbitProperty',  'method' => 'post']) !!}
                   <div class="panel-heading col-md-8">
                    <div class="panel-title">Добавить характеристики
-                     <input type="submit" class="btn btn-success pull-right" value="Submit Property" style="margin:-4px"/>
+                     <input type="submit" class="btn btn-success pull-right" value="Добавить" style="margin:-4px"/>
                    </div>
                    </div>
 
@@ -29,7 +29,7 @@ if(isset($id)){
                           <b>Название товара:</b>
                         <select class="form-control" name="pro_id">
                               @foreach($Products as $product)
-                          <option  value="{{$product->id}}">{{$product->pro_name}}</<option>
+                          <option  value="{{$product->id}}">{{$product->pro_name}}</option>
                               @endforeach
                           </select><br>
 

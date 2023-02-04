@@ -94,7 +94,7 @@ class AdminController extends Controller
 
     public function view_order_details($id) {
 
-        $ProductsDetails =  DB::table('order_products')->rightJoin('products', 'products.id', '=', 'order_products.products_id')->rightJoin('orders', 'orders.id', '=', 'order_products.orders_id')->rightJoin('addresses', 'addresses.user_id', '=', 'orders.user_id')->where('orders_id', '=', $id)->get();
+        $ProductsDetails =  DB::table('order_product')->rightJoin('products', 'products.id', '=', 'order_product.product_id')->rightJoin('orders', 'orders.id', '=', 'order_product.order_id')->rightJoin('addresses', 'addresses.user_id', '=', 'orders.user_id')->where('order_id', '=', $id)->get();
 
         return view('admin.orderDetails',compact('ProductsDetails'));
     }

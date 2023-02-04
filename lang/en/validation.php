@@ -90,7 +90,7 @@ return [
     'max' => [
         'array' => 'The :attribute must not have more than :max items.',
         'file' => 'The :attribute must not be greater than :max kilobytes.',
-        'numeric' => 'The :attribute must not be greater than :max.',
+        'numeric' => 'Значение поля :attribute не должно быть больше :max.',
         'string' => 'The :attribute must not be greater than :max characters.',
     ],
     'max_digits' => 'The :attribute must not have more than :max digits.',
@@ -125,7 +125,7 @@ return [
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => 'Поле :attribute обязательное.',
     'required_array_keys' => 'The :attribute field must contain entries for: :values.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_if_accepted' => 'The :attribute field is required when :other is accepted.',

@@ -18,18 +18,18 @@
     <section id="main-content">
         <section class="wrapper">
             <div class="content-box-large">
-                <h1>Order Details</h1>
-                <a href="{{url('/')}}/admin/orders">View Orders</a>
+                <h1>Детали заказа</h1>
+                <a href="{{url('/')}}/admin/orders">Все Заказы</a>
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Customer Name</th>
-                        <th>City</th>
-                        <th>Address</th>
-                        <th>Phone</th>
-                        <th>Birth</th>
-                        <th>Passport Number</th>
-                        <th>Identification Number</th>
+                        <th>ФИО клиента</th>
+                        <th>Город</th>
+                        <th>Адрес</th>
+                        <th>Телефон</th>
+                        <th>Дата Рождения</th>
+                        <th>Номер паспорта</th>
+                        <th>Идентификационный номер</th>
                     </tr>
                     </thead>
 
@@ -56,17 +56,16 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Product image</th>
-                        <th>Product name</th>
-                        <th>Product ID</th>
-                        <th>Product Code</th>
-                        <th>Product status</th>
-                        <th>Product Period</th>
-                        <th>Price</th>
-                        <th>Amount of days</th>
-                        <th>Start Date</th>
-                        <th>Qty days</th>
-                        <th>Actions</th>
+                        <th>Изображение</th>
+                        <th>Название товара</th>
+                        <th>ID товара</th>
+                        <th>Код</th>
+                        <th>Статус</th>
+                        <th>Период аренды</th>
+                        <th>Цена</th>
+                        <th>Количество дней</th>
+                        <th>Начало</th>
+                        <th>Действия</th>
                     </tr>
                     </thead>
 
@@ -77,36 +76,31 @@
                         <td> <img src="/upload/images/<?php echo $product->pro_img; ?>" alt=""
                                   width="50px" height="50px"/></td>
                         <td>{{ucwords($product->pro_name)}}</td>
-                        <td>{{$product->products_id}}</td>
+                        <td>{{$product->product_id}}</td>
                         <td>{{$product->pro_code}}</td>
                         @if($product->stock)
-                        <td ><p style="background-color: #26da1b ; color: #FFFFFF;padding-left: 15px">In stock</p></td>
+                        <td ><p style="background-color: #26da1b ; color: #FFFFFF;padding-left: 15px">В наличии</p></td>
                         @else
-                            <td><p style="background-color: #fb6965 ; color: #FFFFFF;padding-left: 15px">Reserved</p></td>
+                            <td><p style="background-color: #fb6965 ; color: #FFFFFF;padding-left: 15px">Забранировано</p></td>
                             @endif
                         @if($product->start_date == null && $product->end_date == null)
-                            <td>No period</td>
+                            <td>Не арендуется</td>
                             @else
                         <td>{{date('F j, Y', strtotime($product->start_date))}}<br>{{  date('F j, Y', strtotime($product->end_date))}}</td>
                         @endif
                         <td>{{$product->pro_price}}</td>
                         <td>{{$product->qty}}</td>
 
-                        {!! Form::open(['url' => 'admin/orders/product_date/'.$product->products_id,  'method' => 'post']) !!}
+                        {!! Form::open(['url' => 'admin/orders/product_date/'.$product->product_id,  'method' => 'post']) !!}
                         <td>
                             <input  type="date" placeholder="Start date" size="5"   onchange="" name="start_date" id="start_date"  class="form-control ">
                         </td>
                         <td>
-
-                            <input  type="text" placeholder="qty" size="2"  onchange="" name="qty_days" id="qty_days"  class="form-control">
-
-                        </td>
-                        <td>
-                            <input type="submit" class="btn btn-info btn-small" value="Submit" />
+                            <input type="submit" class="btn btn-info btn-small" value="Подтвердить" />
                             {!! Form::close() !!}
 
-                        <a href="{{url('/')}}/admin/orders/product_returned/{{$product->products_id}}/"
-                           class="btn btn-danger btn-small">Returned</a>
+                        <a href="{{url('/')}}/admin/orders/product_returned/{{$product->product_id}}/"
+                           class="btn btn-danger btn-small">Возвратить</a>
 
                         </td>
                     </tbody>

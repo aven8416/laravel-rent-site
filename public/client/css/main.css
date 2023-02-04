@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
 }
 
-.btn:hover, 
+.btn:hover,
 .btn:focus{
   outline: none;
   box-shadow: none;
@@ -67,7 +67,7 @@ a#scrollUp i{
 **************************/
 
 .header_top {
-  background: none repeat scroll 0 0 #F0F0E9;
+  background: none repeat scroll 0 0 rgb(24, 104, 183);
 }
 
 .contactinfo ul li:first-child{
@@ -76,7 +76,7 @@ a#scrollUp i{
 
 .contactinfo ul li a{
   font-size: 12px;
-  color: #696763;
+  color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -89,7 +89,7 @@ a#scrollUp i{
 .social-icons ul li a {
   border: 0 none;
   border-radius: 0;
-  color: #696763;
+  color: #ffffff;
   padding:0px;
 }
 
@@ -270,7 +270,7 @@ a#scrollUp i{
 
 /*  Dropdown menu*/
 
-.navbar-header 
+.navbar-header
 .navbar-toggle .icon-bar {
     background-color: #fff;
 }
@@ -323,7 +323,7 @@ ul.sub-menu {
 }
 
 .fa-angle-down{
-  padding-left: 5px; 
+  padding-left: 5px;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -339,13 +339,13 @@ ul.sub-menu {
     transform: translateY(0);
   }
 }
-  
+
 /*************************
 *******Footer CSS******
 **************************/
 
 #footer {
-  background: #F0F0E9;
+  background: rgb(24, 104, 183);
 }
 
 
@@ -474,7 +474,7 @@ ul.sub-menu {
 }
 
 .single-widget h2 {
-  color: #666663;
+  color: #ffffff;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -487,7 +487,7 @@ ul.sub-menu {
 }
 
 .single-widget ul li a{
-	color: #8C8C88;
+	color: #ffffff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -530,13 +530,13 @@ ul.sub-menu {
   font-size: 20px;
 }
 
-.searchform  button:hover, 
+.searchform  button:hover,
 .searchform  button:focus{
 	background-color:#FE980F;
 }
 
 .searchform p {
-  color: #8C8C88;
+  color: #ffffff;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -544,19 +544,19 @@ ul.sub-menu {
 }
 
 .footer-bottom {
-  background: #D6D6D0;
+  background: rgb(17 84 151);
   padding-top: 10px;
 }
 
 .footer-bottom p {
-  color: #363432;
+  color: #ffffff;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   margin-left: 15px;
 }
 
 .footer-bottom p span a {
-  color: #FE980F;
+  color: rgb(24, 104, 183);
   font-style: italic;
   text-decoration: underline;
 }
@@ -576,7 +576,7 @@ ul.sub-menu {
 }
 
 .carousel-indicators li.active {
-	  background: #FE980F;
+	  background: #FDB45E;
 }
 
 .item {
@@ -602,7 +602,7 @@ ul.sub-menu {
 }
 
 .item h1 span {
-	color:#FE980F;
+	color: #FDB45E;
 }
 
 .item h2 {
@@ -622,7 +622,7 @@ ul.sub-menu {
 }
 
 .get {
-  background: #FE980F;
+  background: #FDB45E;
   border: 0 none;
   border-radius: 0;
   color: #FFFFFF;
@@ -634,7 +634,7 @@ ul.sub-menu {
 
 
 .item button:hover {
-  background: #FE980F;
+  background: #FDB45E;
 }
 
 .control-carousel {
@@ -645,7 +645,7 @@ ul.sub-menu {
 }
 
 .control-carousel:hover{
-  color: #FE980F ;
+  color: #FDB45E ;
 }
 
 .right {
@@ -659,7 +659,7 @@ ul.sub-menu {
   padding-top: 15px;
 }
 .left-sidebar h2, .brands_products h2 {
-  color: #FE980F;
+  color: #FDB45E;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -806,7 +806,7 @@ h2.title:before{
 
 
 .tooltip-inner {
-  background-color: #FE980F;
+  background-color: #FDB45E;
   border-radius: 4px;
   color: #FFFFFF;
   max-width: 200px;
@@ -816,7 +816,7 @@ h2.title:before{
 }
 
 .tooltip.top .tooltip-arrow {
-  border-top-color: #FE980F;
+  border-top-color: #FDB45E;
   border-width: 5px 5px 0;
   bottom: 0;
   left: 50%;
@@ -861,7 +861,7 @@ h2.title {
 }
 
 .productinfo h2{
-	color: #FE980F;
+	color: #FDB45E;
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	font-weight: 700;
@@ -890,7 +890,7 @@ h2.title {
 }
 
 .product-overlay {
-  background:#FE980F;
+  background: #FDB45E;
   top: 0;
   display: none;
   height: 0;
@@ -919,7 +919,7 @@ h2.title {
   background:#fff;
   border: 0 none;
   border-radius: 0;
-  color: #FE980F;
+  color: #FDB45E;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   margin-bottom: 25px;
@@ -927,7 +927,7 @@ h2.title {
 
 .product-overlay .add-to-cart:hover {
   background:#fff;
-  color: #FE980F;
+  color: #FDB45E;
 }
 
 
@@ -951,7 +951,7 @@ h2.title {
 }
 
 .add-to-cart:hover {
-  background: #FE980F;
+  background: #FDB45E;
   border: 0 none;
   border-radius: 0;
   color: #FFFFFF;
@@ -966,7 +966,7 @@ h2.title {
 }
 
 .add-to-cart:hover {
-  background: #FE980F;
+  background: #FDB45E;
   color: #FFFFFF;
 }
 
@@ -988,7 +988,7 @@ h2.title {
 
 .choose ul li a:hover{
 	background:none;
-	color:#FE980F;
+	color: #FE980F;
 }
 
 .category-tab {
@@ -1550,7 +1550,7 @@ h2.title {
   border-color:transparent transparent transparent #FE980F;
   position: absolute;
   top: 11px;
-  left:48px;
+  left: 65px;
 
 }
 
@@ -1648,7 +1648,7 @@ h2.title {
   font-size: 16px;
   text-align: center;
   font-family: 'Roboto',sans-serif;
-  
+
 }
 
 
@@ -1874,8 +1874,8 @@ h2.title {
 
 
 
-.shopper-info p, 
-.bill-to p, 
+.shopper-info p,
+.bill-to p,
 .order-message p {
   color: #696763;
   font-size: 20px;
@@ -1898,9 +1898,9 @@ h2.title {
 }
 
 
-.shopper-info > form > input, 
-.form-two > form > select, 
-.form-two > form > input, 
+.shopper-info > form > input,
+.form-two > form > select,
+.form-two > form > input,
 .form-one > form > input {
   background:#F0F0E9;
   border: 0 none;
@@ -1955,27 +1955,27 @@ h2.title {
   margin-right: 30px;
 }
 
-#cart_items .cart_info 
+#cart_items .cart_info
 .table.table-condensed.total-result {
   margin-bottom: 10px;
   margin-top: 35px;
   color: #696763
 }
 
-#cart_items .cart_info 
+#cart_items .cart_info
 .table.table-condensed.total-result tr {
   border-bottom: 0
 }
 
-#cart_items .cart_info 
+#cart_items .cart_info
 .table.table-condensed.total-result span {
   color: #FE980F;
   font-weight: 700;
   font-size: 16px
 }
 
-#cart_items .cart_info 
-.table.table-condensed.total-result 
+#cart_items .cart_info
+.table.table-condensed.total-result
 .shipping-cost {
   border-bottom: 1px solid #F7F7F0;
 }
@@ -1989,7 +1989,7 @@ h2.title {
 
 
 
-.blog-post-area 
+.blog-post-area
 .single-blog-post h3 {
   color: #696763;
   font-size: 16px;
@@ -2002,32 +2002,32 @@ h2.title {
 .single-blog-post > a {
 }
 
-.blog-post-area 
+.blog-post-area
 .single-blog-post a img {
   border: 1px solid #F7F7F0;
   width: 100%;
   margin-bottom: 30px
 }
 
-.blog-post-area  
+.blog-post-area
 .single-blog-post p {
   color: #363432
 }
 
-.blog-post-area 
+.blog-post-area
 .post-meta {
   display: block;
   margin-bottom: 25px;
   overflow: hidden;
 }
 
-.blog-post-area 
+.blog-post-area
 .post-meta ul {
   padding:0;
   display: inline;
 }
 
-.blog-post-area 
+.blog-post-area
 .post-meta ul li {
   background:#F0F0E9;
   float: left;
@@ -2038,7 +2038,7 @@ h2.title {
   position: relative;
 }
 
-.blog-post-area 
+.blog-post-area
 .post-meta ul li i {
   background:#FE980F;
   color: #FFFFFF;
@@ -2048,7 +2048,7 @@ h2.title {
 }
 
 .sinlge-post-meta li i:after,
-.blog-post-area 
+.blog-post-area
 .post-meta ul li i:after {
   content: "";
   position: absolute;
@@ -2061,7 +2061,7 @@ h2.title {
   left:24px
 }
 
-.blog-post-area 
+.blog-post-area
 .post-meta ul span {
   float: right;
   color: #FE980F
@@ -2076,8 +2076,8 @@ h2.title {
 }
 
 
-.blog-post-area  
-.single-blog-post 
+.blog-post-area
+.single-blog-post
 .btn-primary {
   background:#FE980F;
   border: medium none;
@@ -2092,7 +2092,7 @@ h2.title {
   margin-top:45px
 }
 
-.pagination-area 
+.pagination-area
 .pagination li a {
   background:#F0F0E9;
   border: 0 none;
@@ -2102,9 +2102,9 @@ h2.title {
   padding: 4px 12px;
 }
 
-.pagination-area 
+.pagination-area
 .pagination li a:hover,
-.pagination-area 
+.pagination-area
 .pagination li .active {
   background:#FE980F;
   color: #fff
@@ -2132,7 +2132,7 @@ h2.title {
   width: 57px;
 }
 
-.pager-area 
+.pager-area
 .pager li a:hover {
   background: #FE980F;
   color: #fff
@@ -2157,7 +2157,7 @@ h2.title {
 }
 
 
-.rating-area 
+.rating-area
 .ratings li i {
   color:#CCCCCC
 }
@@ -2169,8 +2169,8 @@ h2.title {
   text-transform: uppercase;
 }
 
-.rating-area 
-.ratings .color, 
+.rating-area
+.ratings .color,
 .rating-area .color {
   color: #FE980F
 }
@@ -2196,7 +2196,7 @@ h2.title {
 }
 
 
-.commnets 
+.commnets
 .media-object {
   margin-right: 15px;
   width: 100%;
@@ -2212,8 +2212,8 @@ h2.title {
   margin-right: 22px
 }
 
-.commnets p, 
-.response-area p, 
+.commnets p,
+.response-area p,
 .replay-box p {
   font-size: 12px
 }
@@ -2242,7 +2242,7 @@ h2.title {
 }
 
 .blog-socials ul li {
-  
+
   float: left;
   height: 17px;
   margin-right: 5px;
@@ -2265,7 +2265,7 @@ h2.title {
 }
 
 
-.media-list .btn-primary, 
+.media-list .btn-primary,
 .commnets .btn-primary {
   background:#FC9A11;
   border: 0 none;
@@ -2376,7 +2376,7 @@ h2.title {
   width: 100%;
 }
 
-.replay-box form input:hover, 
+.replay-box form input:hover,
 .text-area textarea:hover {
   border: 1px solid #FE980F;
 }
@@ -2411,7 +2411,7 @@ h2.title {
   border-color:#FE980F transparent transparent transparent;
   top: 25px;
   left: 5px
-} 
+}
 
 
 
@@ -2425,7 +2425,7 @@ h2.title {
   margin-bottom: 70px
 }
 
-.contact-info .heading, 
+.contact-info .heading,
 .contact-form .heading {
   text-transform: capitalize;
 }
@@ -2434,7 +2434,7 @@ h2.title {
   margin-bottom: 20px;
 }
 
-#contact-page 
+#contact-page
 .form-control::-moz-placeholder {
   color: #8D8D8D;
 }
@@ -2462,7 +2462,7 @@ h2.title {
 }
 
 
-#contact-page .form-control:focus, 
+#contact-page .form-control:focus,
 #contact-page .form-control:hover {
   box-shadow: inherit;
   border-color: #FDB45E;

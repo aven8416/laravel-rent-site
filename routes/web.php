@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,54 +27,55 @@ Route::get('/home', [HomeController::class, 'index']);
 Route::get('/range', function() {
     return view('front.range');
 });
-Route::post('addReview', 'HomeController@addReview');
-Route::get('/product_details/{id}', 'HomeController@product_details');
-Route::get('selectSize', 'HomeController@selectSize');
-Route::get('selectColor', 'HomeController@selectColor');
+Route::post('addReview', [HomeController::class, 'addReview']);
+Route::get('/product_details/{id}', [HomeController::class, 'product_details']);
+Route::get('selectSize', [HomeController::class, 'selectSize']);
+Route::get('selectColor', [HomeController::class, 'selectColor']);
 
-Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('/logout', [HomeController::class, 'logout']);
 
-Route::get('/shop', 'HomeController@shop');
+Route::get('/shop', [HomeController::class, 'shop']);
 
-Route::get('/products', 'HomeController@shop');
-Route::get('/products/{id}', 'HomeController@proCats');
-Route::get('/products/brand/{name}', 'HomeController@proBrands');
+Route::get('/products', [HomeController::class, 'shop']);
+Route::get('/products/{id}', [HomeController::class, 'proCats']);
+Route::get('/products/brand/{name}', [HomeController::class, 'proBrands']);
 
-Route::get('/contact', 'HomeController@contact');
-Route::post('/search', 'HomeController@search');
-Route::get('/cart', 'CartController@index');
+Route::get('/contact', [HomeController::class, 'contact']);
+Route::post('/search', [HomeController::class, 'search']);
 
-Route::get('/cart/addItem/{id}', 'CartController@addItem');
+Route::get('/newArrival', [HomeController::class, 'newArrival']);
 
-Route::get('/cart/remove/{id}', 'CartController@destroy');
-Route::get('/cart/update/{id}', 'CartController@update');
+Route::get('/cart', [CartController::class, 'index']);
 
-Route::get('/newArrival', 'HomeController@newArrival');
+Route::get('/cart/addItem/{id}', [CartController::class, 'addItem']);
+
+Route::get('/cart/remove/{id}', [CartController::class, 'destroy']);
+Route::get('/cart/update/{id}', [CartController::class, 'update']);
 
 // logged in user pages
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/checkout', 'CheckoutController@index');
-    Route::post('/formvalidate', 'CheckoutController@formvalidate');
+    Route::get('/checkout', [CheckoutController::class, 'index']);
+    Route::post('/formvalidate', [CheckoutController::class, 'formvalidate']);
 
-    Route::post('/payment', 'CheckoutController@payment');
+    Route::post('/payment', [CheckoutController::class, 'payment']);
 
     Route::get('/profile', function() {
         return view('profile.index');
     });
-    Route::get('/orders', 'ProfileController@orders');
-    Route::get('/orders/orderDetails/{id}', 'ProfileController@view_order_details');
+    Route::get('/orders',  [ProfileController::class, 'orders']);
+    Route::get('/orders/orderDetails/{id}', [ProfileController::class, 'view_order_details']);
 
-    Route::get('/address', 'ProfileController@address');
-    Route::post('/updateAddress', 'ProfileController@UpdateAddress');
+    Route::get('/address', [ProfileController::class, 'address']);
+    Route::post('/updateAddress',  [ProfileController::class, 'updateAddress']);
 
-    Route::get('/password', 'ProfileController@Password');
-    Route::post('/updatePassword', 'ProfileController@updatePassword');
+    Route::get('/password',  [ProfileController::class, 'Password']);
+    Route::post('/updatePassword',  [ProfileController::class, 'updatePassword']);
 
     Route::get('/thankyou', function() {
         return view('profile.thankyou');
     });
 
-    Route::get('/mail', 'HomeController@sendmail');
+    Route::get('/mail',  [HomeController::class, 'sendmail']);
 
 });
 
@@ -132,7 +137,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
 
 Auth::routes();
 
-Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('/logout', [LoginController::class, 'logout']);
 Route::post('addToWishList', [HomeController::class, 'wishList']);
 Route::get('/WishList', [HomeController::class, 'View_wishList']);
 Route::get('/removeWishList/{id}', [HomeController::class, 'removeWishList']);
