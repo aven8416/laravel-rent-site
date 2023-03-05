@@ -128,10 +128,10 @@
 
                                 <hr>
 
-                             <input  type="text" placeholder="qty" size="2"  onchange="" name="qty_days" id="qty_days"  class="form-control">
+                             <input  type="text" placeholder="количесвто дней" size="2"  onchange="" name="qty_days" id="qty_days"  class="form-control">
 
                          <br> <br>
-                             <input type="submit" class="btn btn-info btn-small" value="Set date" />
+                             <input type="submit" class="btn btn-info btn-small" value="Подтвердить дату" />
                          {!! Form::close() !!}
                      </div>
 

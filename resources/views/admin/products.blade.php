@@ -76,11 +76,17 @@ $(document).ready(function(){
                                 @if($product->start_date == null && $product->end_date == null)
                                     <td>не арендуется</td>
                                 @else
-                                    <td>{{date('F j, Y', strtotime($product->start_date))}}<br>{{  date('F j, Y', strtotime($product->end_date))}}</td>
+                                    <td>{{date('d.m.Y', strtotime($product->start_date))}}<br>{{  date('d.m.Y', strtotime($product->end_date))}}</td>
                                 @endif
                                 <td>{{$product->pro_name}}</td>
                                 <td>{{$product->pro_code}}</td>
-                                <td>{{$product->pro_price}}</td>
+                                <td>
+                                    @if($product->sale_price==0)
+                                        {{$product->pro_price}}
+                                    @else
+                                        {{$product->sale_price}}
+                                    @endif
+                                </td>
                                 <td>
                                   <?php
                                   $Aimgs = DB::table('alt_images')->where('product_id', $product->id)

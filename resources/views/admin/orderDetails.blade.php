@@ -30,6 +30,8 @@
                         <th>Дата Рождения</th>
                         <th>Номер паспорта</th>
                         <th>Идентификационный номер</th>
+                        <th>Категории прав</th>
+                        <th>Стаж вождения</th>
                     </tr>
                     </thead>
 
@@ -44,7 +46,14 @@
                             <td>{{ucwords($product->phone)}}</td>
                             <td>{{$product->birth}}</td>
                             <td>{{$product->passport_n}}</td>
-                            <td>{{$product->identification_n}}</td>
+                            <td>{{$product->identification_n}}</td>>
+                            <td>
+                                @foreach(json_decode($product->license_category) as $category)
+                                    {{ $loop->first ? '' : ', ' }}
+                                    {{ucwords($category)}}
+                                @endforeach
+                            </td>
+                            <td>{{$product->driving_experience}}</td>
                         </tbody>
                         @endif
                             <?php $count++;?>
@@ -81,19 +90,26 @@
                         @if($product->stock)
                         <td ><p style="background-color: #26da1b ; color: #FFFFFF;padding-left: 15px">В наличии</p></td>
                         @else
-                            <td><p style="background-color: #fb6965 ; color: #FFFFFF;padding-left: 15px">Забранировано</p></td>
+                            <td><p style="background-color: #fb6965 ; color: #FFFFFF;padding-left: 15px">Забронировано</p></td>
                             @endif
                         @if($product->start_date == null && $product->end_date == null)
                             <td>Не арендуется</td>
                             @else
-                        <td>{{date('F j, Y', strtotime($product->start_date))}}<br>{{  date('F j, Y', strtotime($product->end_date))}}</td>
+                        <td>{{date('d.m.Y', strtotime($product->start_date))}}<br>{{  date('d.m.Y', strtotime($product->end_date))}}</td>
                         @endif
-                        <td>{{$product->pro_price}}</td>
+                        <td>
+                            @if($product->sale_price==0)
+                                {{$product->pro_price}}
+                            @else
+                                {{$product->sale_price}}
+                            @endif
+                        </td>
                         <td>{{$product->qty}}</td>
 
                         {!! Form::open(['url' => 'admin/orders/product_date/'.$product->product_id,  'method' => 'post']) !!}
                         <td>
                             <input  type="date" placeholder="Start date" size="5"   onchange="" name="start_date" id="start_date"  class="form-control ">
+                            <input  type="number" value="{{$product->qty}}"   onchange="" name="qty_days"  class="form-control" style="display: none">
                         </td>
                         <td>
                             <input type="submit" class="btn btn-info btn-small" value="Подтвердить" />

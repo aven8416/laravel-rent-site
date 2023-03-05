@@ -44,7 +44,13 @@
                                           width="50px" height="50px"/></td>
                                 <td>{{ucwords($product->pro_name)}}</td>
                                 <td>{{$product->pro_code}}</td>
-                                <td>{{$product->pro_price}}</td>
+                                <td>
+                                    @if($product->sale_price==0)
+                                        {{$product->pro_price}}
+                                    @else
+                                        {{$product->sale_price}}
+                                    @endif
+                                </td>
                                 <td>{{$product->qty}}</td>
                             </tbody>
                             <?php $count++;?>

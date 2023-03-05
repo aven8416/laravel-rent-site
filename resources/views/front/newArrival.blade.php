@@ -102,7 +102,7 @@
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <a href="{{url('/product_details')}}">
+                                        <a href="{{url('/product_details')}}/<?php echo $product->id; ?>">
                                             <img src="/upload/images/<?php echo $product->pro_img; ?>" alt="" />
                                         </a>
 
@@ -121,23 +121,6 @@
                                         <p><a href="{{url('/product_details')}}"><?php echo $product->pro_name; ?></a></p>
                                         <a href="{{url('/cart/addItem')}}/<?php echo $product->id; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
-                                    <a href="{{url('/product_details')}}/<?php echo $product->id; ?>">
-                                        <div class="product-overlay">
-                                            <div class="overlay-content">
-                                                <h2>
-                                                  @if($product->sale_price==0)
-                                                  {{$product->pro_price}} BYN
-                                                  @else
-                                                <img src="{{Config::get('app.url')}}client/images/shop/sale.png" style="width:60px"/>
-                                                <span style="text-decoration:line-through; color:#ddd">
-                                                   {{$product->pro_price}} BYN</span>
-                                                   {{$product->sale_price}} BYN
-                                                  @endif
-                                                </h2>
-                                                <p><?php echo $product->pro_name; ?></p>
-                                                <a href="{{url('/cart/addItem')}}/<?php echo $product->id; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                                            </div>
-                                        </div></a>
                                 </div>
                             {{--    <div class="choose">
                                     <?php

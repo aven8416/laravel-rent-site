@@ -84,7 +84,14 @@ class HomeController extends Controller
             $Products = DB::table('products')->whereIN('cat_id', explode( ',', $brand ))->paginate(6);
             response()->json($Products); //return to ajax
             return view('front.products', compact('Products'));
-        } else{
+        }
+        else if ($request->ajax()){
+
+            $Products = DB::table('products')->paginate(6); // now we are fetching all products
+            response()->json($Products);
+            return view('front.products', compact('Products'));
+        }
+        else{
             $catName = $request->id;
             $Products = DB::table('product_categories')->rightJoin('products', 'product_categories.id', '=', 'products.cat_id')->where('product_categories.name', '=', $catName)->paginate(6);
             return view('front.shop', compact('Products'));
@@ -127,7 +134,13 @@ class HomeController extends Controller
             $Products = DB::table('products')->whereIN('brand_id', explode( ',', $brand ))->paginate(6);
             response()->json($Products); //return to ajax
             return view('front.products', compact('Products'));
-        } else{
+        }else if ($request->ajax()){
+
+            $Products = DB::table('products')->paginate(6); // now we are fetching all products
+            response()->json($Products);
+            return view('front.products', compact('Products'));
+        }
+        else{
             $brandName = $request->name;
             $Products = DB::table('product_brands')->rightJoin('products', 'product_brands.id', '=', 'products.brand_id')->where('product_brands.name', '=', $brandName)->paginate(6);
             return view('front.shop', compact('Products'));
@@ -159,7 +172,7 @@ class HomeController extends Controller
             return view('front.home');
         } else {
             $Products = DB::table('products')->where('pro_name', 'like', '%' . $search . '%')->paginate(12);
-            return view('front.shop', ['msg' => 'Results: ' . $search], compact('Products'));
+            return view('front.shop', ['msg' => 'Результат: ' . $search], compact('Products'));
         }
     }
 

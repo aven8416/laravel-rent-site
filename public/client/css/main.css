@@ -67,7 +67,7 @@ a#scrollUp i{
 **************************/
 
 .header_top {
-  background: none repeat scroll 0 0 rgb(24, 104, 183);
+  background: none repeat scroll 0 0 rgb(67 70 74);
 }
 
 .contactinfo ul li:first-child{
@@ -345,7 +345,7 @@ ul.sub-menu {
 **************************/
 
 #footer {
-  background: rgb(24, 104, 183);
+  background: rgb(67 70 74);
 }
 
 
@@ -544,7 +544,7 @@ ul.sub-menu {
 }
 
 .footer-bottom {
-  background: rgb(17 84 151);
+  background: rgb(54 56 60);
   padding-top: 10px;
 }
 
@@ -866,13 +866,6 @@ h2.title {
 	font-size: 24px;
 	font-weight: 700;
 }
-.product-overlay h2{
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
-	font-weight: 700;
-}
-
 
 .productinfo p{
   font-family: 'Roboto', sans-serif;
@@ -888,57 +881,6 @@ h2.title {
 .productinfo{
  position:relative;
 }
-
-.product-overlay {
-  background: #FDB45E;
-  top: 0;
-  display: none;
-  height: 0;
-  position: absolute;
-  transition: height 500ms ease 0s;
-  width: 100%;
-  display: block;
-  opacity:;
-}
-
-.single-products:hover .product-overlay {
-  display:block;
-  height:100%;
-}
-
-
-.product-overlay .overlay-content {
-  bottom: 0;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-}
-
-.product-overlay .add-to-cart {
-  background:#fff;
-  border: 0 none;
-  border-radius: 0;
-  color: #FDB45E;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  margin-bottom: 25px;
-}
-
-.product-overlay .add-to-cart:hover {
-  background:#fff;
-  color: #FDB45E;
-}
-
-
-.product-overlay p{
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #fff;
-}
-
-
 
 .add-to-cart {
   background:#F5F5ED;
