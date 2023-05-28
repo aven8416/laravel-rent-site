@@ -89,7 +89,21 @@
                                 <input type="text" placeholder="Идентификационный номер" name="identification_n" class="form-control" >
 
                                 <span style="color:red">{{ $errors->first('identification_n') }}</span>
-
+                                <hr>
+                                <label>Категория прав</label>
+                                <select name="license_category[]"  multiple="multiple" class="form-control" >
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                    <option value="m">M</option>
+                                </select>
+                                <span style="color:red">{{ $errors->first('license_category') }}</span>
+                                <hr>
+                                <label>Стаж вождения (кол-во лет):</label>
+                                <input name="driving_experience" type="number" class="form-control" value="2" id="driving_experience"  autocomplete="off"
+                                       MIN="2" MAX="90">
+                                <span style="color:red">{{ $errors->first('driving_experience') }}</span>
                             @else
                                 @foreach($address_data as $value)
                                     <label>Ваше ФИО</label>
