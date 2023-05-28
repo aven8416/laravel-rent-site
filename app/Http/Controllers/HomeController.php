@@ -157,7 +157,7 @@ class HomeController extends Controller
         }
 
         //view product details
-        $Products = DB::table('products')->leftJoin('product_brands', 'product_brands.id', '=', 'products.brand_id')->where('products.id', $id)->get();
+        $Products = DB::table('product_brands')->rightJoin('products',  'products.brand_id', '=', 'product_brands.id')->where('products.id', $id)->get();
         return view('front.product_details', compact('Products'));
 
     }
